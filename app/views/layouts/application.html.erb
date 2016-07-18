@@ -8,7 +8,42 @@
 </head>
 <body>
 
-<%= yield %>
+<div class="container wrap">
+  <div class="row">
+    <div class="col-xs-12">
+      <header>
+        <div class="well">
+          Bluit
+        </div>
+      </header>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-8">
+        <main>
+          <div class="well">
+            <!-- BEGIN main content -->
+            <%= yield %>
+            <!-- END main content -->
+          </div>
+        </main>
+      </div>
+      <div class="col-xs-4">
+        <nav id="sidebar">
+          <div class="well">
+            sidebar
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+<footer>
+  <div class="well">
+    &copy; Super Original Productions, Inc.
+  </div>
+</footer>
 
 </body>
 </html>
