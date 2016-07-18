@@ -28,7 +28,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to @post, flash: { :"alert-success" => "Post was successfully created." } }
+        format.html { redirect_to posts_path, flash: { :"alert-success" => "Post was successfully created." } }
         format.json { render :show, status: :created, location: @post }
       else
         flash.now[:"alert-danger"] = @post.errors.full_messages
