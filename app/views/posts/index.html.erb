@@ -3,16 +3,8 @@
 <ul class="posts">
   <% @posts.each do |post| %>
     <li>
-      <div class="title">
-        <%= link_to post.title, post_details(post) %>
-      </div>
-      <div class="tagline" title="<%= post.created_at %>">
-        submitted <%= time_ago_in_words post.created_at %> ago
-      </div>
-      <ul class="actions">
-        <li><%= link_to "edit", edit_post_path(post) %></li>
-        <li><%= link_to "delete", post, method: :delete, data: { confirm: "Are you sure? This cannot be undone." } %></li>
-      </ul>
+      <%= render "slug", post: post %>
+      <%= render "actions", post: post %>
     </li>
   <% end %>
 </ul>
