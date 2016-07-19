@@ -41,15 +41,28 @@ main
     li
       list-style: none
       margin-bottom: 8px
-      .title
-        font-size: 16px
-        a:link, a:hover, a:active
-          color: blue
-        a:visited
-          color: #551a8b
-      .tagline
-        color: #888
-        font-size: x-small
+
+ul.posts, article
+  .title
+    font-size: 16px
+    a:link, a:hover, a:active
+      color: blue
+    a:visited
+      color: #551a8b
+  .tagline
+    color: #888
+    font-size: x-small
+
+article
+  section.body
+    border: 1px solid #3498db
+    border-radius: 7px
+    margin: 15px 0
+    padding: 5px
+    background-color: #fafafa
+    max-width: 60em
+    overflow: auto
+    font-size: small
 
 nav#sidebar
   margin-right: 10px
@@ -70,7 +83,7 @@ nav#sidebar
     color: white
     background: #d7ebff
     background: linear-gradient(to bottom, #d7ebff 0%, #aec8e1 50%, #9cbcd9 51%, #74a4d2 100%)
-    
+
 footer
   color: gray
   font-size: smaller
