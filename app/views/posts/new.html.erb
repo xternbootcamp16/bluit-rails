@@ -1,7 +1,7 @@
 <%= form_for @post do |f| %>
   <fieldset>
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, autofocus: true %>
   </fieldset>
   <fieldset>
     <%= f.label :link_url %>
@@ -12,5 +12,5 @@
     <%= f.text_area :body %>
   </fieldset>
 
-  <%= f.submit %>
+  <%= f.submit class: "btn btn-default" %>
 <% end %>
