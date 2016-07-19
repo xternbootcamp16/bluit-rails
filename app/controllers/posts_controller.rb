@@ -28,10 +28,10 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to posts_path, notice: 'Thank you for posting!' }
+        format.html { redirect_to posts_path, flash: { :"alert-success" => 'Thank you for posting!' } }
         format.json { render :show, status: :created, location: @post }
       else
-        flash.now[:'alert-danger'] = @post.errors.full_messages
+        flash.now[:"alert-danger"] = @post.errors.full_messages
         format.html { render :new }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
