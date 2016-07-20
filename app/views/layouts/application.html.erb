@@ -38,6 +38,13 @@
       </nav>
       <header>
         <%= link_to "Bluit", root_path %>
+        <div id="session_actions">
+          <% if user_signed_in? %>
+            <%= link_to 'logout', destroy_user_session_path, method: :delete %>
+          <% else %>
+            <%= link_to 'login', new_user_session_path %>
+          <% end %>
+        </div>
       </header>
     </div>
   </div>
