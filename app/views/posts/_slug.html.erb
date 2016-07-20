@@ -3,4 +3,5 @@
 </div>
 <div class="tagline" title="<%= post.created_at %>">
   submitted <%= time_ago_in_words post.created_at %> ago
+  to <%= link_to post.category&.name, post.category %>
 </div>
