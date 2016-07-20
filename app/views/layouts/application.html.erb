@@ -30,6 +30,7 @@
         <nav id="sidebar">
           <%= link_to "Submit a new link", new_post_path %>
           <%= link_to "Create your own subbluit", new_category_path %>
+          <div><%= yield :sidebar %></div>
         </nav>
       </div>
     </div>

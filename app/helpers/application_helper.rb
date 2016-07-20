@@ -1,4 +1,8 @@
 module ApplicationHelper
+  def sidebar(sidebar_content)
+    content_for(:sidebar) { sidebar_content }
+  end
+
   def flash_messages(flash)
     flash.map do |name, msg|
       content_tag :div, class: "alert #{name}" do
