@@ -5,4 +5,6 @@
   <div class="description">
     <%= @category.description %>
   </div>
+
+  <%= render "posts/list", posts: @category.posts %>
 </div>
