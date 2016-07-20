@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.includes(:category).all
+    @posts = Post.all
   end
 
   # GET /posts/1
