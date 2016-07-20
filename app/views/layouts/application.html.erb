@@ -11,6 +11,18 @@
 <div class="container wrap">
   <div class="row">
     <div class="col-xs-12">
+      <nav id="categories">
+        <ul>
+          <% Category.all.each_with_index do |category, i| %>
+            <li>
+              <% if i > 0 %>
+                <span class="separator">-</span>
+              <% end %>
+              <%= link_to category.name, category %>
+            </li>
+          <% end %>
+        </ul>
+      </nav>
       <header>
         <%= link_to "Bluit", root_path %>
       </header>
