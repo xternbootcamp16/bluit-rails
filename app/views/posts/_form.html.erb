@@ -6,7 +6,7 @@
 
   <fieldset>
     <%= f.label :category_id %>
-    <%= f.collection_select :category_id, Category.all, :id, :name, prompt: "-- Select a category --" %>
+    <%= f.collection_select :category_id, categories, :id, :name, prompt: "-- Select a category --" %>
   </fieldset>
 
   <fieldset>

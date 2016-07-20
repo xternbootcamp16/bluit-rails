@@ -18,7 +18,7 @@
             <span class="caret"></span>
           </button>
           <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
-            <% Category.find_each do |category| %>
+            <% categories.each do |category| %>
               <li role="presentation">
                 <%= link_to category.name, category, role: 'menuitem', tabindex: "-1" %>
               </li>
@@ -26,7 +26,7 @@
           </ul>
         </div>
         <ul class="category-list">
-          <% Category.all.each_with_index do |category, i| %>
+          <% categories.each_with_index do |category, i| %>
             <li>
               <% if i > 0 %>
                 <span class="separator">-</span>
