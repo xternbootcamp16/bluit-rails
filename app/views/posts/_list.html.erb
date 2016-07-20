@@ -1,0 +1,8 @@
+<ul class="posts">
+  <% posts.each do |post| %>
+    <li>
+      <%= render "posts/slug", post: post %>
+      <%= render "posts/actions", post: post %>
+    </li>
+  <% end %>
+</ul>
